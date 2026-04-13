@@ -36,10 +36,17 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Column(modifier = modifier.padding(16.dp)) {
-        Card(modifier = Modifier.fillMaxWidth()) {
-            Text(text = "¡Bienvenida al Laboratorio 04!", modifier = Modifier.padding(16.dp))
-        }
+    Card(
+        modifier = Modifier.fillMaxWidth(),
+        colors = androidx.compose.material3.CardDefaults.cardColors(
+            containerColor = androidx.compose.ui.graphics.Color.Yellow // Cambiado a amarillo
+        )
+    ) {
+        Text(
+            text = "¡Bienvenida al Laboratorio 04!",
+            modifier = Modifier.padding(16.dp)
+        )
+    }
 
         androidx.compose.material3.OutlinedTextField(
             value = "",
@@ -55,7 +62,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
             Text("Este es mi segundo commit")
         }
     }
-}
+
 
 @Preview(showBackground = true)
 @Composable
