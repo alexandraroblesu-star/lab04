@@ -44,8 +44,10 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         androidx.compose.material3.OutlinedTextField(
             value = "",
             onValueChange = { },
-            label = { Text("Escribe aquí") },
-            modifier = Modifier.padding(top = 8.dp).fillMaxWidth()
+            label = { Text("ESTILO CAMBIADO EN MAIN") }, // Cambiamos el texto
+            modifier = Modifier
+                .padding(top = 16.dp)
+                .fillMaxWidth(0.8f) // Lo hacemos un poco más angosto (80% del ancho)
         )
 
         androidx.compose.material3.Button(
