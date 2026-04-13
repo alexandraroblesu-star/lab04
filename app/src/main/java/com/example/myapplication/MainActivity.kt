@@ -36,25 +36,19 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
-    // Column organiza los elementos de arriba a abajo
-    Column(
-        modifier = modifier.padding(16.dp)
-    ) {
-        // Componente Card (Tarjeta)
-        Card(
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Text(
-                text = "¡Bienvenida al Laboratorio 04!",
-                modifier = Modifier.padding(16.dp)
-            )
+    Column(modifier = modifier.padding(16.dp)) {
+        Card(modifier = Modifier.fillMaxWidth()) {
+            Text(text = "¡Bienvenida al Laboratorio 04!", modifier = Modifier.padding(16.dp))
         }
 
-        // Texto adicional debajo de la tarjeta
-        Text(
-            text = "Hello $name!",
+        // --- ESTO ES LO NUEVO PARA EL 2DO COMMIT ---
+        androidx.compose.material3.Button(
+            onClick = { /* No hace falta poner nada aquí */ },
             modifier = Modifier.padding(top = 8.dp)
-        )
+        ) {
+            Text("Este es mi segundo commit")
+        }
+        // ------------------------------------------
     }
 }
 
