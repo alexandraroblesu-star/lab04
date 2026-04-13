@@ -41,14 +41,19 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
             Text(text = "¡Bienvenida al Laboratorio 04!", modifier = Modifier.padding(16.dp))
         }
 
-        // --- ESTO ES LO NUEVO PARA EL 2DO COMMIT ---
+        androidx.compose.material3.OutlinedTextField(
+            value = "",
+            onValueChange = { },
+            label = { Text("Escribe aquí") },
+            modifier = Modifier.padding(top = 8.dp).fillMaxWidth()
+        )
+
         androidx.compose.material3.Button(
-            onClick = { /* No hace falta poner nada aquí */ },
+            onClick = { },
             modifier = Modifier.padding(top = 8.dp)
         ) {
             Text("Este es mi segundo commit")
         }
-        // ------------------------------------------
     }
 }
 
